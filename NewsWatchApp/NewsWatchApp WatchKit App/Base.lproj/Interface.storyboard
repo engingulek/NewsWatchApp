@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch40"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
+    </dependencies>
+    <scenes>
+        <!--Top News Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="TopNewsController" customModule="NewsWatchApp_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Sources" id="sRV-dQ-8G0">
+                            <connections>
+                                <segue destination="ApP-Jv-9G3" kind="push" id="Qd3-56-OOV"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="mkk-Jq-nsu">
+                            <items>
+                                <tableRow identifier="topNewsRow" id="oMi-GG-WFg" customClass="TopNewsRowCont" customModule="NewsWatchApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="142" alignment="left" layout="vertical" id="h1F-P9-qqb">
+                                        <items>
+                                            <imageView height="75" alignment="left" image="K" id="dQx-0e-1cb"/>
+                                            <label width="149" height="58" alignment="left" text="dsdsadsdadasdsdasdasdsdsddsdsdsdsadsdsdsdsadsdsdsadsada" textAlignment="justified" baselineAdjustment="alignCenters" numberOfLines="6" id="oAd-xu-BVk">
+                                                <fontDescription key="font" type="system" pointSize="9"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="newsImage" destination="dQx-0e-1cb" id="qCy-fC-1GO"/>
+                                        <outlet property="newsTitle" destination="oAd-xu-BVk" id="7tm-oe-lbs"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="topNewsTable" destination="mkk-Jq-nsu" id="dN6-x9-fML"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-16.790123456790123" y="-6.472081218274111"/>
+        </scene>
+        <!--Sources Controller-->
+        <scene sceneID="5zE-As-Fe2">
+            <objects>
+                <controller id="ApP-Jv-9G3" customClass="SourcesController" customModule="NewsWatchApp_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="gZl-P5-vy6">
+                            <items>
+                                <tableRow identifier="sourceRow" id="n1l-hN-9EF" customClass="SourceRowController" customModule="NewsWatchApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="ky9-hu-m6y">
+                                        <items>
+                                            <label width="136" height="36" alignment="left" text="Label" textAlignment="center" id="dLJ-hL-27O"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="sourcesLabel" destination="dLJ-hL-27O" id="icm-hk-Yac"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="sourceTable" destination="gZl-P5-vy6" id="U7l-9O-H81"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="232.54320987654322" y="-6.472081218274111"/>
+        </scene>
+        <!--newsDetail-->
+        <scene sceneID="YIi-IM-yb1">
+            <objects>
+                <controller identifier="newsDetail" id="p8N-kf-t96" customClass="NewsDetail" customModule="NewsWatchApp_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="75" alignment="left" image="K" id="myV-bZ-N4s"/>
+                        <label width="1" height="118" alignment="left" text="Label" textAlignment="left" numberOfLines="12" id="1mB-Ov-Jyh">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label width="1" alignment="left" text="Label" textAlignment="left" numberOfLines="2" id="Y2C-gz-C4G">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="newsDeatilAuthorLabel" destination="Y2C-gz-C4G" id="ims-eY-3Pm"/>
+                        <outlet property="newsDetailContentLabel" destination="1mB-Ov-Jyh" id="zuP-Km-MVi"/>
+                        <outlet property="newsDetailImage" destination="myV-bZ-N4s" id="p0v-pe-J0m"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="245.97530864197532" y="326.62436548223349"/>
+        </scene>
+        <!--newsPage-->
+        <scene sceneID="dAo-dF-Vqg">
+            <objects>
+                <controller identifier="newsPage" id="kEh-Ub-8vk" customClass="NewsPageController" customModule="NewsWatchApp_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="hum-3a-AH9"/>
+                        <table alignment="left" id="zKv-4B-V9K">
+                            <items>
+                                <tableRow identifier="newsRow" id="BUf-oO-TdF" customClass="NewsRowController" customModule="NewsWatchApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="131" alignment="left" layout="vertical" id="HcV-pA-8qh">
+                                        <items>
+                                            <imageView height="71" alignment="left" id="oZi-fS-MdX"/>
+                                            <label width="1" height="54" alignment="left" text="Label" textAlignment="left" numberOfLines="5" id="Bld-VP-DIP">
+                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="newsImage" destination="oZi-fS-MdX" id="mfe-0E-hnp"/>
+                                        <outlet property="newsLabel" destination="Bld-VP-DIP" id="Dro-V3-fqQ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="newsTable" destination="zKv-4B-V9K" id="GdF-Pa-5er"/>
+                        <outlet property="sourceTitleLabel" destination="hum-3a-AH9" id="5zX-nH-LuW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="474.32098765432102" y="-4.7461928934010151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="K" width="843" height="780"/>
+    </resources>
+</document>
